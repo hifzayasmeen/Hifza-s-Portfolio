@@ -6,6 +6,7 @@ Three-page portfolio website for **Web Technologies, BSCS Semester 5, Assignment
 - **Roll number:** _add your roll number_
 - **Section:** _add your section_
 - **GitHub repository:** https://github.com/hifzayasmeen/Hifza-s-Portfolio
+- **Live website:** https://hifza-s-portfolio-delta.vercel.app
 
 ## Pages and CSS methods
 
