@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- Page 2: Projects and services. CSS method: EMBEDDED only (style element in the head only). -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects and services by Hifza Yasmeen: RAG pipelines, chatbots, multi-agent systems and CRM automations.">
+  <meta name="theme-color" content="#11152b">
+  <title>Projects and Services | Hifza Yasmeen</title>
+
+  <!-- ===== EMBEDDED CSS ===== -->
+  <style>
+    :root { --ink:#171a35; --night:#11152b; --muted:#62657a; --paper:#f6f7fb; --violet:#5146bd; --mint:#70e1bb; --line:#e2e3ed; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.7; }
+    h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; line-height:1.2; }
+    h1 { margin:0; font-size:clamp(2rem,5vw,3rem); }
+    h2 { margin:0 0 12px; font-size:clamp(1.8rem,4vw,2.5rem); }
+    h3 { margin:24px 0 8px; color:var(--violet); font-size:1.2rem; }
+    a:focus-visible,input:focus-visible { outline:3px solid var(--violet); outline-offset:3px; }
+    header { padding:24px 6vw 22px; border-bottom:4px solid var(--mint); background:var(--night); color:#f8f8ff; }
+    header > div,footer > div { max-width:1180px; margin:0 auto; }
+    .eyebrow { margin:0 0 2px; color:var(--mint); font-size:.84rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    header > div > p:not(.eyebrow) { margin:6px 0 18px; color:#c2c5dc; }
+    footer { margin-top:28px; padding:28px 6vw; border-top:4px solid var(--mint); background:var(--night); color:#f8f8ff; font-size:.94rem; }
+    footer p { margin:0; color:#c2c5dc; }
+    address { margin:0 0 10px; font-style:normal; }
+    nav { display:flex; flex-wrap:wrap; gap:9px; }
+    nav a { padding:8px 16px; border:1px solid #555b7d; border-radius:999px; color:#f8f8ff; font-weight:600; text-decoration:none; transition:background-color .18s ease,transform .18s ease; }
+    nav a:hover { background:#252b49; transform:translateY(-1px); }
+    nav a[aria-current="page"] { border-color:var(--mint); background:var(--mint); color:var(--night); font-weight:700; }
+    main { max-width:1180px; margin:0 auto; padding:clamp(32px,6vw,64px) 6vw 20px; }
+    .page-grid { display:grid; grid-template-columns:minmax(0,2fr) minmax(260px,1fr); gap:22px; align-items:stretch; margin-bottom:60px; }
+    section { margin-bottom:56px; }
+    #featured-project { padding:clamp(22px,4vw,36px); border:1px solid var(--line); border-top:5px solid var(--violet); border-radius:18px; background:#fff; box-shadow:0 16px 45px rgba(24,26,61,.07); }
+    #featured-project h2 { font-size:clamp(1.6rem,3vw,2.2rem); }
+    #featured-project p { max-width:68ch; color:var(--muted); }
+    .tag { display:inline-block; margin:0 6px 6px 0; padding:3px 11px; border-radius:999px; background:#edebff; color:#39318f; font-size:.82rem; font-weight:700; }
+    .notice { align-self:stretch; padding:25px; border:1px solid #d2eee4; border-radius:18px; background:#eaf8f3; }
+    .notice h2 { font-size:1.55rem; }
+    .notice p { color:#405b51; font-size:.98rem; }
+    .notice a { display:inline-block; padding:10px 15px; border-radius:9px; background:#17684f; color:#fff; text-decoration:none; font-weight:700; }
+    .notice a:hover { background:#104d3a; }
+    a[href^="https"] { color:var(--violet); font-weight:600; text-decoration-thickness:2px; text-underline-offset:3px; }
+    footer a,footer a[href^="https"] { color:var(--mint); }
+    audio[controls],video[controls] { display:block; width:100%; max-width:760px; border-radius:12px; background:var(--night); }
+    .section-heading { margin-bottom:18px; }
+    .project-search { max-width:520px; margin:0 0 22px; }
+    .project-search label { display:block; margin-bottom:6px; font-weight:700; }
+    .project-search input { width:100%; min-height:48px; padding:10px 14px; border:1px solid #cfd1df; border-radius:10px; background:#fff; color:var(--ink); font:inherit; }
+    .search-status { min-height:1.6em; margin:7px 0 0; color:var(--muted); font-size:.9rem; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:#fff; box-shadow:0 10px 30px rgba(24,26,61,.05); }
+    table { width:100%; min-width:740px; border-collapse:collapse; }
+    caption { padding:15px 16px; color:#39318f; font-weight:700; text-align:left; }
+    th,td { padding:13px 15px; border-top:1px solid var(--line); text-align:left; vertical-align:top; font-size:.94rem; }
+    thead th { border-top:0; background:var(--night); color:#fff; }
+    tbody th { color:#302b78; }
+    tbody tr:nth-child(even) { background:#f6f7fb; }
+    tbody tr:hover { background:#eeedff; }
+    ul.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin:20px 0 0; padding:0; list-style:none; }
+    ul.services li { padding:17px 19px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    #media-heading + h3 { margin-top:22px; }
+    @media (max-width:800px) { .page-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { body { font-size:16px; } header,footer { padding-right:5vw; padding-left:5vw; } main { padding-right:5vw; padding-left:5vw; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER AND NAVIGATION ===== -->
+  <header>
+    <div>
+      <p class="eyebrow">AI · Automation · Applied ideas</p>
+      <h1>Hifza Yasmeen</h1>
+      <p>Projects and services</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="information.html" aria-current="page">Projects and services</a>
+        <a href="registration.html">Project inquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-grid">
+
+      <!-- ===== ARTICLE: one self-contained project description ===== -->
+      <article id="featured-project">
+        <h2>Featured project: RAG pipeline in n8n</h2>
+        <p>
+          <span class="tag">n8n</span><span class="tag">LangChain nodes</span><span class="tag">OpenAI Embeddings</span><span class="tag">Pinecone</span><span class="tag">GPT-4.1-mini</span>
+        </p>
+        <h3>The problem</h3>
+        <p>Teams keep knowledge in documents, but finding an answer means opening files one by one.</p>
+        <h3>How it works</h3>
+        <p>The workflow watches a Google Drive folder. When a new file is uploaded, it extracts the text, creates embeddings with OpenAI and stores them in a Pinecone vector database. An AI agent then uses that vector store as a retrieval tool, so it can answer questions about the stored documents in real time.</p>
+        <h3>What is next</h3>
+        <p>I am now studying how to scale this design for production-level use. The code is on my <a href="https://github.com/hifzayasmeen/Ragpipeline" target="_blank" rel="noopener">GitHub repository</a>.</p>
+      </article>
+
+      <!-- ===== ASIDE: related announcement ===== -->
+      <aside class="notice" aria-labelledby="aside-heading">
+        <h2 id="aside-heading">Open to collaboration</h2>
+        <p>I am looking for projects that use AI agents, RAG pipelines or CrewAI multi-agent systems.</p>
+        <p><strong>Tip:</strong> when you send an inquiry, describe the manual task you want to remove. A clear before-and-after makes a better first workflow.</p>
+        <p><a href="registration.html">Send a project inquiry</a></p>
+      </aside>
+    </div>
+
+    <!-- ===== SECTION: Table of projects ===== -->
+    <section aria-labelledby="table-heading">
+      <h2 id="table-heading">Selected projects</h2>
+      <div class="project-search" hidden>
+        <label for="project-filter">Find a project by name, category or tool</label>
+        <input type="search" id="project-filter" aria-controls="project-list" placeholder="Try “RAG”, “chatbot” or “Python”">
+        <p class="search-status" id="search-status" role="status" aria-live="polite">Showing all 6 projects.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Six AI automation projects with their category, tools and purpose</caption>
+          <thead>
+            <tr>
+              <th scope="col">Project</th>
+              <th scope="col">Category</th>
+              <th scope="col">Tools</th>
+              <th scope="col">What it does</th>
+            </tr>
+          </thead>
+          <tbody id="project-list">
+            <tr>
+              <th scope="row">RAG Pipeline</th>
+              <td>Retrieval</td>
+              <td>n8n, OpenAI Embeddings, Pinecone</td>
+              <td>Indexes new Drive files and answers questions about them.</td>
+            </tr>
+            <tr>
+              <th scope="row">OpenAI and Gemini chatbots</th>
+              <td>Chatbot</td>
+              <td>n8n, GPT-4.1-mini, Gemini 2.5 Flash</td>
+              <td>Hold multi-turn conversations using buffer window memory.</td>
+            </tr>
+            <tr>
+              <th scope="row">CV Optimizer</th>
+              <td>Multi-agent app</td>
+              <td>Python, CrewAI, Streamlit, pypdf</td>
+              <td>An ATS specialist and a resume writer tailor a CV to a job posting.</td>
+            </tr>
+            <tr>
+              <th scope="row">Email Replier Agent</th>
+              <td>Automation</td>
+              <td>n8n, Gmail API, OpenAI</td>
+              <td>Reads unread email on a schedule, drafts replies and marks them read.</td>
+            </tr>
+            <tr>
+              <th scope="row">Productivity Manager</th>
+              <td>Multi-agent system</td>
+              <td>n8n, OpenAI, Gemini, Groq, Google Sheets</td>
+              <td>A manager agent delegates to task, note and reminder agents.</td>
+            </tr>
+            <tr>
+              <th scope="row">CRM System</th>
+              <td>CRM automation</td>
+              <td>n8n</td>
+              <td>Manages customer and lead interactions with AI.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: Services ===== -->
+    <section aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <ul class="services">
+        <li>Workflow automation with n8n</li>
+        <li>Question-answering chatbots over your own documents (RAG)</li>
+        <li>Multi-agent assistants with CrewAI</li>
+        <li>CRM and email automation</li>
+      </ul>
+    </section>
+
+    <!-- ===== SECTION: Multimedia ===== -->
+    <section aria-labelledby="media-heading">
+      <h2 id="media-heading">Watch and listen</h2>
+
+      <h3>Video: how the RAG pipeline works</h3>
+      <!-- Video with controls; text between the tags is the fallback -->
+      <video controls width="640" height="360" preload="metadata">
+        <source src="media/rag-pipeline-demo.mp4" type="video/mp4">
+        Your browser does not support the video element. <a href="media/rag-pipeline-demo.mp4">Download the video</a>.
+      </video>
+
+      <h3>Audio: intro chime</h3>
+      <!-- Audio with controls; text between the tags is the fallback -->
+      <audio controls preload="metadata">
+        <source src="media/intro-chime.mp3" type="audio/mpeg">
+        <source src="media/intro-chime.ogg" type="audio/ogg">
+        Your browser does not support the audio element. <a href="media/intro-chime.mp3">Download the audio clip</a>.
+      </audio>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <address>
+      Lahore, Pakistan | <a href="mailto:hifzayasmeen79@gmail.com">hifzayasmeen79@gmail.com</a> |
+      <a href="https://github.com/hifzayasmeen">GitHub</a> |
+      <a href="https://www.linkedin.com/in/hifza-yasmeen-1b31a2408">LinkedIn</a>
+    </address>
+    <p>&copy; 2026 Hifza Yasmeen. Built with HTML and CSS for Web Technologies, BSCS Semester 5.</p>
+  </footer>
+
+  <script>
+    const projectFilter = document.querySelector("#project-filter");
+    const projectRows = Array.from(document.querySelectorAll("#project-list tr"));
+    const searchStatus = document.querySelector("#search-status");
+
+    projectFilter.closest(".project-search").hidden = false;
+    projectFilter.addEventListener("input", () => {
+      const query = projectFilter.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      for (const row of projectRows) {
+        const matches = row.textContent.toLowerCase().includes(query);
+        row.hidden = !matches;
+        if (matches) visibleCount += 1;
+      }
+
+      searchStatus.textContent = visibleCount
+        ? `Showing ${visibleCount} of ${projectRows.length} projects.`
+        : "No projects match your search.";
+    });
+  </script>
+</body>
+</html>

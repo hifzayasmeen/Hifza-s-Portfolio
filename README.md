@@ -11,6 +11,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). Create a production build with `npm run build`, then run it with `npm start`.
 
+The original three-page HTML portfolio is also available on Vercel: [Projects and services](https://hifza-s-portfolio-delta.vercel.app/information.html), [Home](https://hifza-s-portfolio-delta.vercel.app/index.html), and [Project inquiry](https://hifza-s-portfolio-delta.vercel.app/registration.html).
+
 ## Sections
 
 - Hero, about, categorized skills, featured projects, verified project milestones, and contact.
