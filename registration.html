@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- Page 3: Project inquiry form. CSS method: EXTERNAL only (linked style.css only). -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tell Hifza Yasmeen about your AI agent, RAG pipeline or workflow automation project.">
+  <meta name="theme-color" content="#11152b">
+  <title>Project Inquiry | Hifza Yasmeen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div>
+      <p class="eyebrow">AI · Automation · Applied ideas</p>
+      <h1>Hifza Yasmeen</h1>
+      <p>Let’s talk about what you’re building.</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="information.html">Projects and services</a>
+        <a href="registration.html" aria-current="page">Project inquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="inquiry-heading">
+      <p class="eyebrow">Have a workflow in mind?</p>
+      <h2 id="inquiry-heading">Tell me about your project</h2>
+      <p>Share the task you want to improve and I’ll get back to you with ideas for a first workflow. This is a static portfolio: submitting opens a draft in your email app, so you can review it before sending. Your details are not stored on this website.</p>
+    </section>
+
+    <ol class="steps" aria-label="What happens next">
+      <li>Describe what you want to automate.</li>
+      <li>Review the message in your email app.</li>
+      <li>Send it and I’ll reply to your email.</li>
+    </ol>
+
+    <form id="inquiry-form" action="mailto:hifzayasmeen79@gmail.com" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Your contact details</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input type="text" id="full-name" name="Full name" placeholder="e.g. Ayesha Khan" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="Reply email" placeholder="name@example.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="contact-method">How should I contact you?</label>
+          <select id="contact-method" name="Preferred contact">
+            <option value="Email">Email</option>
+            <option value="Video call">Video call</option>
+            <option value="Chat message">Chat message</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contact-details">Contact handle or call availability <span class="hint">(optional)</span></label>
+          <input type="text" id="contact-details" name="Contact details" maxlength="120" placeholder="A username or a good time for a call">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>About your project</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="project-type">What are you looking to build? <span aria-hidden="true">*</span></label>
+            <select id="project-type" name="Project type" required>
+              <option value="" selected disabled>Select a project type</option>
+              <option value="n8n workflow automation">n8n workflow automation</option>
+              <option value="RAG chatbot">RAG chatbot over documents</option>
+              <option value="Multi-agent assistant">Multi-agent assistant</option>
+              <option value="CRM or email automation">CRM or email automation</option>
+              <option value="Other / not sure yet">Other / not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="timeline">When would you like to start?</label>
+            <select id="timeline" name="Timeline">
+              <option value="Just exploring">Just exploring</option>
+              <option value="Within a month">Within a month</option>
+              <option value="Within three months">Within three months</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="field-label">Tools or integrations involved</span>
+          <div class="choice-list">
+            <label class="choice" for="int-gmail"><input type="checkbox" id="int-gmail" name="Integrations" value="Gmail"><span>Gmail</span></label>
+            <label class="choice" for="int-sheets"><input type="checkbox" id="int-sheets" name="Integrations" value="Google Sheets"><span>Google Sheets</span></label>
+            <label class="choice" for="int-drive"><input type="checkbox" id="int-drive" name="Integrations" value="Google Drive"><span>Google Drive</span></label>
+            <label class="choice" for="int-crm"><input type="checkbox" id="int-crm" name="Integrations" value="CRM system"><span>CRM system</span></label>
+            <label class="choice" for="int-other"><input type="checkbox" id="int-other" name="Integrations" value="Other"><span>Other / not sure</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="comments">What would you like to automate? <span aria-hidden="true">*</span></label>
+          <textarea id="comments" name="Project description" maxlength="600" placeholder="Tell me what happens today, what you'd like to happen instead, and anything else that's useful." required></textarea>
+          <span class="counter" id="message-count" aria-live="polite">0 / 600</span>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit">Prepare email inquiry <span aria-hidden="true">→</span></button>
+        <button type="reset">Clear form</button>
+      </div>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      <p class="email-fallback">No email app opened? <a href="mailto:hifzayasmeen79@gmail.com">Email me directly</a>.</p>
+    </form>
+  </main>
+
+  <footer>
+    <div>
+      <address>Lahore, Pakistan <span aria-hidden="true">·</span> <a href="mailto:hifzayasmeen79@gmail.com">Email</a> <span aria-hidden="true">·</span> <a href="https://github.com/hifzayasmeen">GitHub</a> <span aria-hidden="true">·</span> <a href="https://www.linkedin.com/in/hifza-yasmeen-1b31a2408">LinkedIn</a></address>
+      <p>&copy; 2026 Hifza Yasmeen <span aria-hidden="true">·</span> Web Technologies, BSCS Semester 5</p>
+    </div>
+  </footer>
+
+  <script>
+    const inquiryForm = document.querySelector("#inquiry-form");
+    const projectDescription = document.querySelector("#comments");
+    const messageCount = document.querySelector("#message-count");
+    const formStatus = document.querySelector("#form-status");
+
+    projectDescription.addEventListener("input", () => {
+      messageCount.textContent = `${projectDescription.value.length} / ${projectDescription.maxLength}`;
+    });
+
+    inquiryForm.addEventListener("reset", () => {
+      messageCount.textContent = `0 / ${projectDescription.maxLength}`;
+      formStatus.textContent = "";
+    });
+
+    inquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(inquiryForm);
+      const integrations = data.getAll("Integrations");
+      const lines = [
+        `Name: ${data.get("Full name")}`,
+        `Reply email: ${data.get("Reply email")}`,
+        `Preferred contact: ${data.get("Preferred contact")}`,
+        `Contact details: ${data.get("Contact details") || "Not specified"}`,
+        `Project type: ${data.get("Project type")}`,
+        `Timeline: ${data.get("Timeline")}`,
+        `Integrations: ${integrations.length ? integrations.join(", ") : "Not specified"}`,
+        "",
+        "Project description:",
+        data.get("Project description")
+      ];
+      const subject = encodeURIComponent(`Project inquiry from ${data.get("Full name")}`);
+      const body = encodeURIComponent(lines.join("\n"));
+      formStatus.textContent = "Your email app should open with a draft. Review the details and press Send to deliver your inquiry.";
+      window.location.href = `mailto:hifzayasmeen79@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
